@@ -16,7 +16,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://li630925405.github.io/2020/10/08/spider-shell/uniq.png">
 <meta property="article:published_time" content="2020-10-08T12:16:05.000Z">
-<meta property="article:modified_time" content="2020-10-08T14:01:49.506Z">
+<meta property="article:modified_time" content="2020-10-08T14:03:29.302Z">
 <meta property="article:author" content="Yazhou Li">
 <meta property="article:tag" content="bash, python, spider, data mining">
 <meta name="twitter:card" content="summary">
@@ -99,21 +99,19 @@
 
 <ul>
 <li><p>AWK 是一种处理文本文件的语言，是一个强大的文本分析工具。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2 this is a test</span><br><span class="line"></span><br><span class="line">3 Are you like awk</span><br><span class="line"></span><br><span class="line">This&#39;s a test</span><br><span class="line"></span><br><span class="line">10 There are orange,apple,mongo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2 this is a test</span><br><span class="line">3 Are you like awk</span><br><span class="line">This&#39;s a test</span><br><span class="line">10 There are orange,apple,mongo</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 每行按空格或TAB分割，输出文本中的1、4项</span></span><br><span class="line">$ awk <span class="string">&#x27;&#123;print $1,$4&#125;&#x27;</span> log.txt</span><br></pre></td></tr></table></figure>
 
-<p>2 a<br>3 like<br>This’s<br>10 orange,apple,mongo</p>
+<p>output:<br>2 a<br>3 like<br>This’s<br>10 orange,apple,mongo</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用&quot;,&quot;分割</span></span><br><span class="line">$ awk -F, <span class="string">&#x27;&#123;print $1,$2&#125;&#x27;</span>  log.txt</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Uniq 删除重复行</p>
 <img src="/2020/10/08/spider-shell/uniq.png" style="zoom:65%;">
 </li>
-<li><p>seq</p>
-<p>seq 0 15 100 # 从0到100每隔15输出一个数</p>
+<li><p>seq<br>seq 0 15 100 # 从0到100每隔15输出一个数</p>
 </li>
-<li><p>wget请求url返回正常，curl请求没有结果并返回301</p>
-<p>加上 -L 就正常了，因为-L参数接受重定向的结果</p>
+<li><p>wget请求url返回正常，curl请求没有结果并返回301<br>加上 -L 就正常了，因为-L参数接受重定向的结果</p>
 </li>
 <li><p>sed “:a;N;s/\n/ /g;ta” 把文件的换行符换为空格 (s: 替换 g: 全局)</p>
 </li>
