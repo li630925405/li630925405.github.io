@@ -64,6 +64,113 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-music" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/22/music/" class="article-date">
+  <time datetime="2020-10-22T14:34:39.000Z" itemprop="datePublished">2020-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/22/music/">music</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[toc]</p>
+<h2 id="音乐信息"><a href="#音乐信息" class="headerlink" title="音乐信息"></a>音乐信息</h2><h3 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h3><h4 id="DFT"><a href="#DFT" class="headerlink" title="DFT"></a>DFT</h4><h4 id="DFT泄露"><a href="#DFT泄露" class="headerlink" title="DFT泄露"></a>DFT泄露</h4><h4 id="加窗"><a href="#加窗" class="headerlink" title="加窗"></a>加窗</h4><h4 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h4><h3 id="音乐特征"><a href="#音乐特征" class="headerlink" title="音乐特征"></a>音乐特征</h3><hr>
+<h4 id="MP3格式"><a href="#MP3格式" class="headerlink" title="MP3格式"></a>MP3格式</h4><p>Layer-3 音频文件，MPEG(Moving Picture Experts Group) 在汉语中译为活动图像专家组，特指活动影音压缩标准，MPEG音频文件是MPEG1 标准中的声音部分，也叫MPEG 音频层，它根据压缩质量和编码复杂程度划分为三层，即Layer-1、Layer2、Layer3，且分别对应MP1、MP2、MP3 这三种声音文件，并根据不同的用途，使用不同层次的编码。 MPEG 音频编码的层次越高，编码器越复杂，压缩率也越高. 不过MP3 对音频信号采用的是有损压缩方式，为了降低声音失真度，MP3采取了“感官编码技术”，即编码时先对音频文件进行频谱分析，然后用过滤器滤掉噪音电平，接着通过量化的方式将剩下的每一位打散排列，最后形成具有较高压缩比的MP3 文件，并使压缩后的文件在回放时能够达到比较接近原音源的声音效果。</p>
+<h4 id="各种音频处理库（如librosa-eye3D…）与他们的区别"><a href="#各种音频处理库（如librosa-eye3D…）与他们的区别" class="headerlink" title="各种音频处理库（如librosa, eye3D…）与他们的区别"></a>各种音频处理库（如librosa, eye3D…）与他们的区别</h4><p><a target="_blank" rel="noopener" href="https://python.libhunt.com/eyed3-alternatives">https://python.libhunt.com/eyed3-alternatives</a></p>
+<h4 id="spectrom-频域图"><a href="#spectrom-频域图" class="headerlink" title="spectrom 频域图"></a>spectrom 频域图</h4><p>one axis represents <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Time">time</a>, and the other axis represents <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Frequency">frequency</a>; a third dimension indicating the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Amplitude">amplitude</a> of a particular frequency at a particular time is represented by the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Brightness">intensity</a> or color of each point in the image.</p>
+<p>横坐标时间，纵坐标频率，各个频率的强度用颜色表征</p>
+<img src="/2020/10/22/music/spectrom.png">
+
+<h4 id="倒谱"><a href="#倒谱" class="headerlink" title="倒谱"></a>倒谱</h4><p>倒谱（cepstrum）就是一种信号的傅里叶变换经对数运算后再进行傅里叶反变换得到的谱。</p>
+<img src="/2020/10/22/music/cepstrum.png">
+
+<p>在<strong>Mel频谱</strong>上面获得的倒谱系数h[k]就称为Mel频率倒谱系数，简称MFCC。</p>
+<p>The Mel Scale, mathematically speaking, is the result of some non-linear transformation of the frequency scale. The Mel Spectrogram is a normal Spectrogram, but with a Mel Scale on the y axis.</p>
+<h4 id="各种特征"><a href="#各种特征" class="headerlink" title="各种特征"></a>各种特征</h4><p>过零率：</p>
+<img src="/2020/10/22/music/ZCR.png">
+
+<p>为什么？</p>
+<h3 id="编码细节"><a href="#编码细节" class="headerlink" title="编码细节"></a>编码细节</h3><hr>
+<ol>
+<li><p>Python路径处理, os, os.path, glob, pathlib</p>
+</li>
+<li><p>F-string 字符串格式化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;Tom&quot;</span></span><br><span class="line">age = <span class="number">3</span></span><br><span class="line"><span class="string">f&quot;His name is <span class="subst">&#123;name&#125;</span>, he&#x27;s <span class="subst">&#123;age&#125;</span> years old.&quot;</span></span><br><span class="line"><span class="string">&quot;His name is Tom, he&#x27;s 3 years old.&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><pre><code class="python"># LabelEncoder 是对不连续的数字或者文本进行编号
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+le.fit([1,5,67,100])
+le.transform([1,1,100,67,5])
+输出： array([0,0,3,2,1])
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line"># OneHotEncoder 用于将表示分类的数据扩维：</span><br><span class="line">from sklearn.preprocessing import OneHotEncoder</span><br><span class="line">ohe &#x3D; OneHotEncoder()</span><br><span class="line">ohe.fit([[1],[2],[3],[4]])ohe.transform([2],[3],[1],[4]).toarray()</span><br><span class="line">输出：[ [0,1,0,0] , [0,0,1,0] , [1,0,0,0] ,[0,0,0,1] ]</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+<li><p><code>Pandas.drop([‘filename’, ‘length’],axis=1)</code> , <code>axis=1</code>说明是纵坐标</p>
+</li>
+<li><p>Keras本身并不是一个框架，实际上它是一个位于其他Deep Learning框架之上的高级API。目前它支持TensorFlow、Theano和CNTK。</p>
+</li>
+<li><p><code>model.add(layers.Dense(256, activation=&#39;relu&#39;))</code> 全连接层</p>
+</li>
+<li></li>
+</ol>
+<h3 id="深度学习知识点"><a href="#深度学习知识点" class="headerlink" title="深度学习知识点"></a>深度学习知识点</h3><hr>
+<h4 id="softmax分类器"><a href="#softmax分类器" class="headerlink" title="softmax分类器"></a>softmax分类器</h4><p>输入每个类别的概率（区别与max函数–hard max）</p>
+<img src="/2020/10/22/music/softmax.png">
+
+<h4 id="交叉熵函数？"><a href="#交叉熵函数？" class="headerlink" title="交叉熵函数？"></a>交叉熵函数？</h4><img src="/2020/10/22/music/loss.png">
+
+<p>softmax反向传播求导形式很简单</p>
+<img src="/2020/10/22/music/backprop.png">
+
+<h4 id="Optimizer"><a href="#Optimizer" class="headerlink" title="Optimizer"></a>Optimizer</h4><ol>
+<li><p>momentum optimizer – 有惯性 减少震荡</p>
+<img src="/2020/10/22/music/momentum.png">
+</li>
+<li><p>RMSProp</p>
+<img src="/2020/10/22/music/RMSprop.png"> 
+
+<p>Dw÷一个很小的数，W方向变化加快；db÷一个很大的数，b方向变化减慢</p>
+</li>
+<li><p>Adam (adaptive moment estimation): combination of momentum optimizer and RMSprop</p>
+<img src="/2020/10/22/music/Adam.png">
+
+</li>
+</ol>
+<h4 id="Loss-function"><a href="#Loss-function" class="headerlink" title="Loss function"></a>Loss function</h4><ol>
+<li><p>triplet loss</p>
+<img src="/2020/10/22/music/triplet.png">
+
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://li630925405.github.io/2020/10/22/music/" data-id="ckgm1jlho0000w0vo891uft8u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/" rel="tag">music</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-spider-shell" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/08/spider-shell/" class="article-date">
@@ -241,7 +348,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash-python-spider-data-mining/" rel="tag">bash, python, spider, data mining</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash-python-spider-data-mining/" rel="tag">bash, python, spider, data mining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/" rel="tag">music</a></li></ul>
     </div>
   </div>
 
@@ -251,7 +358,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/bash-python-spider-data-mining/" style="font-size: 10px;">bash, python, spider, data mining</a>
+      <a href="/tags/bash-python-spider-data-mining/" style="font-size: 10px;">bash, python, spider, data mining</a> <a href="/tags/music/" style="font-size: 10px;">music</a>
     </div>
   </div>
 
@@ -271,6 +378,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/10/22/music/">music</a>
+          </li>
         
           <li>
             <a href="/2020/10/08/spider-shell/">spider_shell</a>
