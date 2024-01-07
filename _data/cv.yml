@@ -3,8 +3,8 @@
   contents:
     - name: Full Name
       value: Yazhou Li
-    - name: Date of Birth
-      value: 30th August 1999
+    - name: Research Interests
+      value: Spatial Audio, Room Acoustics
     - name: Languages
       value: Chinese, English
 
@@ -13,10 +13,9 @@
   contents:
     - title: Ph.D. in Computer Science
       institution: Center for Digital Music, Queen Mary University of London
-      year: 2021 - now
+      year: 2021 - present
       description:
         - Advised by Joshua Reiss and Lin Wang
-        - Description 2.
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
@@ -25,42 +24,41 @@
       institution: SHENYUAN Honors College, Beihang University
       year: 2017 - 2021
       description:
-        # - Description 1.
+        - GPA, 3.74/4
         # - Description 2.
 
 - title: Experience
   type: time_table
   contents:
     - title: Research Assistant
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+      institution: Center for Digital Music (C4DM), Queen Mary University of London
+      year: 2021 - present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - binaural and personal audio reproduction using loudspeaker arrays with room acoustics modelling
     - title: Research Assistant
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+      institution: Speech and Hearing Research Center (SHRC), Peking University
+      year: 2020/11 - 2021/6
       description:
-        - Description 1.
-        - Description 2.
+        - advised by Tianshu Qu
+        - spatial principal components based individual HRTFs model using 3D head meshes
 
     - title: Research Assistant
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+      institution: P.C. ROSSIN College of Engineering & Applied Science, Lehigh University 
+      year: 2020/1 - 2020/6
+      description:
+        - advised by Yahong Rosa Zheng
+        - GPU profiling for autonomous driving
 
 
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 1921
-#       items: 
-#         - Nobel Prize in Physics 
-#         - Matteucci Medal
-#     - year: 2029
-#       items: 
-#         - Max Planck Medal
+- title: Teaching Assistant
+  type: time_table
+  contents:
+    - year: 2023
+      items: 
+        - ECS764A - Applied Statistics
+        - ECS602U/ECS707P - Digital Signal Processing
+    - year: 2020
+      items: 
+        - DSCI 421 - Accelerated Computing for Machine Learning
+        - ECE 350/450 - Introduction to Robotic Perception and Computer Vision
 
