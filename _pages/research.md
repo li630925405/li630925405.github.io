@@ -22,6 +22,8 @@ My work explores how machine learning and acoustic knowledge can be combined to 
 
 ## Audio software and earlier projects
 
-Alongside my research, I develop audio software. At PASACO Studio (2024), I worked on a real-time iOS audio engine using AVAudioEngine and C++ buffers, together with a modular SwiftUI interface. The project received the Most Fun Award at Muse Hub Hackathon 2024 and the Best Creative Hack Award at Timbre Tools Hackathon 2024.
+Alongside my research, I develop audio software. At [PASACO Studio](https://pasaco.world/) (2024), I worked on a real-time iOS audio engine using AVAudioEngine and C++ buffers, together with a modular SwiftUI interface. My audio software projects received the Most Fun Award at Muse Hub Hackathon 2024 and the Best Creative Hack Award at Timbre Tools Hackathon 2024.
+
+I also co-developed [Daily Life Vocoder](https://github.com/li630925405/daily-life-vocoder), a mobile vocoder sequencer for exploring everyday sounds and musical timbres.
 
 [Browse earlier audio projects →]({{ '/projects/' | relative_url }})
