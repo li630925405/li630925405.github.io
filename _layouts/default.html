@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
   <head>
-    {% if page.redirect %}<meta http-equiv="refresh" content="3; url={{ '/' | relative_url }}">{% endif %}
+    {% if page.redirect %}<meta http-equiv="refresh" content="0; url={% if page.redirect contains '://' %}{{ page.redirect | escape }}{% else %}{{ page.redirect | relative_url }}{% endif %}">{% endif %}
     {% include head.html %}
   </head>
   <body class="academic-site">
