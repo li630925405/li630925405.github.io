@@ -65,7 +65,7 @@
 - title: Teaching
   type: time_table
   contents:
-    - title: Teaching Fellow — Graphical User Interfaces (ECS255U)
+    - title: 'Teaching Fellow — <a href="https://curriculum.qmul.ac.uk/subject/2026/ecs522u">Graphical User Interfaces (ECS522U)</a>'
       institution: Queen Mary University of London
       year: Feb–Jun 2025
       description:
@@ -75,13 +75,13 @@
       institution: Queen Mary University of London
       year: 2022–2024
       description:
-        - Applied Statistics (IOT764P, ECS764A); Data Mining (IOT607U).
+        - '<a href="https://www.qmul.ac.uk/eecs/people/profiles/wanglin.html">Applied Statistics</a> (IOT764P, ECS764A); <a href="https://qmplus.qmul.ac.uk/course/info.php?id=25803">Data Mining</a> (IOT607U).'
     - title: Teaching Assistant — Computer Vision and Accelerated Computing
       institution: Lehigh University
       year: '2020'
       description:
-        - Introduction to Robotic Perception and Computer Vision (ECE 350/45).
-        - Accelerated Computing for Machine Learning (DSCI 421).
+        - '<a href="https://wordpress.lehigh.edu/robotics/courses/">Introduction to Robotic Perception and Computer Vision</a> (ECE 350/450).'
+        - '<a href="https://catalog.lehigh.edu/courselisting/dsci/">Accelerated Computing for Machine Learning</a> (DSCI 421).'
 
 - title: Academic Service
   type: time_table
