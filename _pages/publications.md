@@ -17,5 +17,5 @@ nav_order: 2
 ## Conference papers
 
 <div class="publications">
-{% bibliography -f {{ site.scholar.bibliography }} --query @inproceedings %}
+{% bibliography -f {{ site.scholar.bibliography }} --group_by none --query @inproceedings %}
 </div>
