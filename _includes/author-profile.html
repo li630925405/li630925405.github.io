@@ -3,7 +3,7 @@
     <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Portrait of Yazhou Li" width="170" height="170" fetchpriority="high">
   </a>
   <div class="author-summary">
-    <p class="author-name">{{ site.first_name }} {{ site.last_name }}</p>
+    <p class="author-name">{{ site.first_name }} {{ site.last_name }}{% if site.chinese_name %}<span lang="zh-Hans">（{{ site.chinese_name }}）</span>{% endif %}</p>
     <p class="author-role">PhD Researcher</p>
     <p class="author-affiliation">Centre for Digital Music<br>Queen Mary University of London</p>
     <p class="author-bio">Spatial audio, room acoustics, and machine learning.</p>

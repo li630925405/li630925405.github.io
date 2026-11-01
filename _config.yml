@@ -2,10 +2,11 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Yazhou Li # the website title (if blank, full name will be used instead)
+title: Yazhou Li（栗亚舟） # the website title (if blank, full name will be used instead)
 first_name: Yazhou
 middle_name: 
 last_name: Li
+chinese_name: 栗亚舟
 email: yazhou.li@qmul.ac.uk
 cv_pdf: CV_2026_1029.pdf
 content_updated: 2026-10-29
@@ -15,7 +16,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Yazhou Li, spatial audio, room acoustics, personal sound zones, neural acoustic modelling, BRIR, HRTF
+keywords: Yazhou Li, 栗亚舟, spatial audio, room acoustics, personal sound zones, neural acoustic modelling, BRIR, HRTF
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.svg
