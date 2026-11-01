@@ -1,98 +1,39 @@
 ---
 layout: default
 ---
-<!-- _layouts/cv.html -->
-{% unless site.data.resume %}
-<div class="post">
-
+<div class="post academic-cv">
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fa-solid fa-file-pdf"></i></a>{% endif %}</h1>
-      {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+    <a class="cv-download" href="{{ site.cv_pdf | prepend: '/assets/pdf/' | relative_url }}">Download full CV <span class="link-format">PDF</span></a>
+    <p class="cv-date">Updated {{ site.content_updated | date: '%d %B %Y' }}</p>
   </header>
-
-  <article>
-    <div class="cv">
-      {% for entry in site.data.cv %}
-        <a class="anchor" id="{{ entry.title }}"></a>
-        <div class="card mt-3 p-3">
-          <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-          <div>
-          {% if entry.type == "list" %}
-            {% include cv/list.html %}
-          {% elsif entry.type == "map" %}
-            {% include cv/map.html %}
-          {% elsif entry.type == "nested_list" %}
-            {% include cv/nested_list.html %}
-          {% elsif entry.type == "time_table" %}
-            {% include cv/time_table.html %}
-          {% elsif entry.type == "list_groups" %}
-            {% include cv/list_groups.html %}
-          {% else %}
-            {{ entry.contents }}
-          {% endif %}
-          </div>
+  <nav class="cv-navigation" aria-label="CV sections">
+    {% for entry in site.data.cv %}<a href="#{{ entry.title | slugify }}">{{ entry.title }}</a>{% endfor %}
+  </nav>
+  {% for entry in site.data.cv %}
+  <section class="cv-section" aria-labelledby="{{ entry.title | slugify }}">
+    <h2 id="{{ entry.title | slugify }}">{{ entry.title }}</h2>
+    {% if entry.type == 'map' %}
+      <dl class="cv-facts">{% for item in entry.contents %}<dt>{{ item.name }}</dt><dd>{{ item.value }}</dd>{% endfor %}</dl>
+    {% elsif entry.type == 'time_table' %}
+      {% for item in entry.contents %}
+      <div class="cv-entry">
+        <p class="experience-date">{{ item.year }}</p>
+        <div>
+          <h3>{{ item.title }}</h3>
+          {% if item.institution %}<p class="cv-institution">{{ item.institution }}</p>{% endif %}
+          {% if item.description %}<ul>{% for detail in item.description %}<li>{{ detail }}</li>{% endfor %}</ul>{% endif %}
         </div>
-      {% endfor %}
       </div>
-  </article>
-
-</div>
-{% else %}
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fa-solid fa-file-pdf"></i></a>{% endif %}</h1>
-    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
-  </header>
-
-  <article>
-    <div class="cv">
-      {% for data in site.data.resume %}
-        {% if site.jsonresume and site.jsonresume.size > 0 %}
-          {% unless site.jsonresume contains data[0] %}
-            {% continue %}
-          {% endunless %}
-        {% endif %}
-        {% if data[0] == "meta" or data[1].size == 0 %}
-          {% continue %}
-        {% endif %}
-        <a class="anchor" id="{{ data[0] }}"></a>
-        <div class="card mt-3 p-3">
-          <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
-          <div>
-          {% case data[0] %}
-            {% when "basics" %}
-              {% include resume/basics.html %}
-            {% when "education" %}
-              {% include resume/education.html %}
-            {% when "work" %}
-              {% include resume/work.html %}
-            {% when "volunteer" %}
-              {% include resume/volunteer.html %}
-            {% when "projects" %}
-              {% include resume/projects.html %}
-            {% when "awards" %}
-              {% include resume/awards.html %}
-            {% when "skills" %}
-              {% include resume/skills.html %}
-            {% when "publications" %}
-              {% include resume/publications.html %}
-            {% when "languages" %}
-              {% include resume/languages.html %}
-            {% when "interests" %}
-              {% include resume/interests.html %}
-            {% when "certificates" %}
-              {% include resume/certificates.html %}
-            {% when "references" %}
-              {% include resume/references.html %}
-            {% else %}
-
-          {% endcase %}
-          </div>
-        </div>
       {% endfor %}
-      </div>
-  </article>
-
+    {% elsif entry.type == 'list' %}
+      <ul>{% for item in entry.contents %}<li>{{ item }}</li>{% endfor %}</ul>
+    {% endif %}
+  </section>
+  {% endfor %}
+  <section class="cv-section" aria-labelledby="cv-publications">
+    <h2 id="cv-publications">Publications</h2>
+    <p>For the full list of conference papers and the manuscript under submission, see the <a href="{{ '/publications/' | relative_url }}">publications page</a> or <a href="{{ site.cv_pdf | prepend: '/assets/pdf/' | relative_url }}">download the PDF CV</a>.</p>
+  </section>
 </div>
-{% endunless %}

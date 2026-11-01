@@ -1,9 +1,9 @@
 ---
 layout: page
-title: projects
+title: Audio Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
-nav: true
+description: Earlier work in real-time audio programming, source separation, and spatial audio.
+nav: false
 nav_order: 3
 display_categories: [work]
 horizontal: false

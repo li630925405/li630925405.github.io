@@ -1,24 +1,11 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
-# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
-
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Eng 408</p>
-    <p>London E1 4NS</p>
-
-news: true  # includes a list of news items
-# latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
 ---
 
+I am a PhD researcher in **Artificial Intelligence and Music** at the [Centre for Digital Music (C4DM)](https://c4dm.eecs.qmul.ac.uk/), Queen Mary University of London, supervised by [Joshua Reiss](https://joshreiss.github.io/) and [Lin Wang](https://www.eecs.qmul.ac.uk/~linwang/).
 
-I'm a third-year PhD student at [C4DM](https://c4dm.eecs.qmul.ac.uk/) (Center for Digital Music), Queen Mary University of London, in [AIM](https://www.aim.qmul.ac.uk/) (Artificial Intelligence and Music) project, supervised by [Joshua Reiss](http://www.eecs.qmul.ac.uk/~josh/) and [Lin Wang](http://www.eecs.qmul.ac.uk/~linwang/). Previously, I earned my bachelor degree from Beihang University, majoring in Computer Science and Technology. 
+My research connects **spatial acoustic modelling and sound field control**. I develop neural representations of binaural room impulse responses (BRIRs) from sparse measurements and study how these models can support personal sound zones and loudspeaker reproduction.
 
-My research interests lie in spatial audio and room acoustics. My PhD project is "Placing Virtual Objects in Acoustic Scenes".
+In 2026, I was a research intern at the National Institute of Informatics, working with [Shoichi Koyama](https://www.sh01.org/) on HRTF-conditioned BRIR personalisation. Previously, I worked on HRTF personalisation at Peking University with [Tianshu Qu](https://eecs.pku.edu.cn/xxkxjsxy/info/1472/6494.htm) and received my B.S. in Computer Science and Technology from Beihang University.

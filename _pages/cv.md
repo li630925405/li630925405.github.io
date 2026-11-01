@@ -1,11 +1,11 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: Curriculum Vitae
+nav_title: CV
 nav: true
 nav_order: 5
-cv_pdf: CV_2023_10_10.pdf
-description: 
+description: Research, education, teaching, and academic service.
 # toc:
 #   sidebar: left
 ---

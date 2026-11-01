@@ -1,0 +1,17 @@
+- id: neural-acoustics
+  title: Neural acoustic modelling
+  summary: Reconstructing binaural room impulse responses from sparse spatial measurements using SIREN and physics-informed networks.
+  description: I study continuous neural representations of binaural room impulse responses (BRIRs), including sinusoidal representation networks (SIREN), physics-informed architectures, and frequency-dependent modelling. I evaluate both reconstruction accuracy and the effect of model errors on spatial audio reproduction.
+  papers: li2026subband,li2025pinn
+
+- id: sound-field-control
+  title: Personal sound zones
+  summary: Learning filter designs for loudspeaker arrays, with an emphasis on robustness to acoustic modelling errors.
+  description: I investigate neural-network-based filter design for personal sound zones and transaural reproduction. My work connects sound field estimation to control, benchmarking neural methods against conventional optimisation and examining their robustness when room acoustic models are imperfect.
+  papers: li2026regularization,li2023impact
+
+- id: personalised-audio
+  title: Personalised spatial audio
+  summary: Conditioning room acoustic models on individual HRTFs to account for differences between listeners.
+  description: During my research internship at the National Institute of Informatics, I developed an HRTF-conditioned neural framework for personalising BRIRs to unseen listeners. Earlier work at Peking University mapped features from 3D head meshes to HRTF representations, using data from more than 400 subjects.
+  papers: li2026personalization

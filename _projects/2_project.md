@@ -2,7 +2,7 @@
 layout: page
 title: Denoise for Separation
 description: ECS7013P - Deep Learning for Audio and Music final project
-img: assets/img/denoise.jpg
+img: assets/img/denoise.png
 importance: 1
 category: work
 ---

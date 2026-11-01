@@ -1,81 +1,59 @@
 ---
 layout: default
 ---
+<div class="academic-home">
+  <section class="about-section" aria-labelledby="intro-title">
+    <h1 id="intro-title">About me</h1>
+    <div class="intro-bio">{{ content }}</div>
+  </section>
 
-<!-- about.html -->
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
+  {% if site.announcements.enabled and site.news.size > 0 %}
+  <section class="academic-section" aria-labelledby="news-heading">
+    <h2 id="news-heading">News</h2>
+    {% include news.html limit=true %}
+  </section>
+  {% endif %}
 
-        <article>
-          {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+  <section class="academic-section" aria-labelledby="research-heading">
+    <h2 id="research-heading">Research interests</h2>
+    <ul class="research-interest-list">
+      {% for area in site.data.research %}
+      <li><a href="{{ '/research/' | relative_url }}#{{ area.id }}">{{ area.title }}</a> — {{ area.summary }}</li>
+      {% endfor %}
+    </ul>
+  </section>
 
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
+  <section class="academic-section" aria-labelledby="papers-heading">
+    <h2 id="papers-heading">Selected publications</h2>
+    {% include selected_papers.html %}
+    <p class="section-more"><a href="{{ '/publications/' | relative_url }}">Full publication list</a></p>
+  </section>
 
-              {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-              
-              {% include figure.html
-                path = profile_image_path
-                class = profile_image_class
-                sizes = sizes
-                alt = page.profile.image
-                cache_bust = true 
-              %}
-            {% endif -%}
-            {%- if page.profile.more_info %}
-            <div class="more-info">
-              {{ page.profile.more_info }}
-            </div>
-            {%- endif %}
-          </div>
-          {%- endif %}
+  <section class="academic-section" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Research experience</h2>
+    <div class="experience-list">
+      {% assign research_experience = site.data.cv | where: 'title', 'Research Experience' | first %}
+      {% for position in research_experience.contents %}
+      <div class="experience-row">
+        <span class="experience-date">{{ position.year }}</span>
+        <div><h3>{{ position.title }}</h3><p>{{ position.institution }}</p></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 
-          <div class="clearfix">
-            {{ content }}
-          </div>
+  <section class="academic-section" aria-labelledby="teaching-heading">
+    <h2 id="teaching-heading">Teaching</h2>
+    <p>Teaching Fellow for <strong>Graphical User Interfaces</strong> at QMUL (2025), delivering practical Figma and React lectures to over 200 students.</p>
+    <p>Previously taught on Applied Statistics and Data Mining at QMUL, and computer vision and accelerated computing at Lehigh University.</p>
+  </section>
 
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
-
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
-
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
-
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
-            </div>
-          {%- endif %}
-        </article>
-
+  <section class="academic-section" aria-labelledby="service-heading">
+    <h2 id="service-heading">Academic service</h2>
+    <ul>
+      <li><strong>Reviewer:</strong> IEEE Signal Processing Letters, IJCNN 2026, and ICASSP 2027.</li>
+      <li><strong>WiMIR mentor (2026):</strong> mentored two early-career researchers in music information retrieval.</li>
+      <li><strong>Volunteer:</strong> AES International Conference on Artificial Intelligence and Machine Learning for Audio (2025).</li>
+    </ul>
+  </section>
 </div>

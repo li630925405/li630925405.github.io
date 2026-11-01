@@ -1,64 +1,121 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Yazhou Li
-    - name: Research Interests
-      value: Spatial Audio, Room Acoustics
-    - name: Languages
-      value: Chinese, English
-
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. in Computer Science
-      institution: Center for Digital Music, Queen Mary University of London
-      year: 2021 - present
+    - title: Ph.D., Artificial Intelligence and Music
+      institution: Centre for Digital Music, Queen Mary University of London
+      year: 2021–2026
       description:
-        - Advised by Joshua Reiss and Lin Wang
-        # - title: Description 3.
-        #   contents:
-        #     - Sub-description 1.
-        #     - Sub-description 2.
-    - title: B.S. in Computer Science
+        - 'Advisors: <a href="https://joshreiss.github.io/">Joshua Reiss</a> and Lin Wang.'
+    - title: B.S., Computer Science and Technology
       institution: SHENYUAN Honors College, Beihang University
-      year: 2017 - 2021
+      year: 2017–2021
       description:
-        - GPA, 3.74/4
-        # - Description 2.
+        - 'GPA: 3.74/4.'
 
-- title: Experience
+- title: Research Interests
+  type: list
+  contents:
+    - Sound field control and estimation; personal sound zones; loudspeaker arrays.
+    - Room acoustics; spatial audio; audio signal processing; deep learning.
+
+- title: Research Experience
   type: time_table
   contents:
-    - title: Research Assistant
-      institution: Center for Digital Music (C4DM), Queen Mary University of London
-      year: 2021 - present
+    - title: PhD Researcher
+      institution: Centre for Digital Music, Queen Mary University of London
+      year: Sep 2021–present
       description:
-        - binaural and personal audio reproduction using loudspeaker arrays with room acoustics modelling
-    - title: Research Assistant
-      institution: Speech and Hearing Research Center (SHRC), Peking University
-      year: 2020/11 - 2021/6
+        - 'Advisors: <a href="https://joshreiss.github.io/">Joshua Reiss</a> and Lin Wang.'
+        - Designed and trained SIREN and physics-informed neural architectures for BRIR interpolation from sparse measurements.
+        - Investigated frequency-dependent modelling and evaluated reconstruction accuracy and downstream personal sound zone performance.
+        - Developed neural-network-based filter design methods for sound field control, benchmarking robustness against conventional optimisation.
+    - title: Research Intern
+      institution: National Institute of Informatics
+      year: Mar–Jun 2026
       description:
-        - advised by Tianshu Qu
-        - spatial principal components based individual HRTFs model using 3D head meshes
-
+        - 'Advisor: <a href="https://www.sh01.org/">Shoichi Koyama</a>.'
+        - Developed an HRTF-conditioned neural framework for personalising BRIRs to unseen listeners.
+        - Designed a sub-band SIREN architecture for spatial BRIR interpolation and evaluated its impact on crosstalk cancellation.
     - title: Research Assistant
-      institution: P.C. ROSSIN College of Engineering & Applied Science, Lehigh University 
-      year: 2020/1 - 2020/6
+      institution: Speech and Hearing Research Center, Peking University
+      year: Nov 2020–Jun 2021
       description:
-        - advised by Yahong Rosa Zheng
-        - GPU profiling for autonomous driving
+        - 'Advisor: <a href="https://eecs.pku.edu.cn/xxkxjsxy/info/1472/6494.htm">Tianshu Qu</a>.'
+        - Mapped PCA-based 3D head-mesh features to SPCA-based HRTF representations using deep neural networks.
+        - Processed three datasets covering over 400 subjects and evaluated against anthropometric feature baselines.
+    - title: Research Assistant
+      institution: P.C. Rossin College of Engineering and Applied Science, Lehigh University
+      year: Jan–Jun 2020
+      description:
+        - 'Advisor: Yahong Rosa Zheng.'
+        - Profiled three autonomous-driving vision algorithms on NVIDIA Jetson TX2 with and without GPU acceleration, across five power modes using two profiling tools.
+        - Second place, F1tenth Grand Prix (IFAC 2020).
 
-
-- title: Teaching Assistant
+- title: Industry Experience
   type: time_table
   contents:
-    - year: 2023
-      items: 
-        - ECS764A - Applied Statistics
-        - ECS602U/ECS707P - Digital Signal Processing
-    - year: 2020
-      items: 
-        - DSCI 421 - Accelerated Computing for Machine Learning
-        - ECE 350/450 - Introduction to Robotic Perception and Computer Vision
+    - title: iOS Audio Developer (part-time)
+      institution: PASACO Studio
+      year: Feb–Nov 2024
+      description:
+        - Architected a real-time audio engine combining AVAudioEngine and low-level C++ buffers for an audio-interactive game.
+        - Worked with UI designers and built a modular SwiftUI framework with custom sprite animations.
+        - Most Fun Award, Muse Hub Hackathon 2024; Best Creative Hack Award, Timbre Tools Hackathon 2024.
 
+- title: Teaching
+  type: time_table
+  contents:
+    - title: Teaching Fellow — Graphical User Interfaces (ECS255U)
+      institution: Queen Mary University of London
+      year: Feb–Jun 2025
+      description:
+        - Delivered hands-on lectures on Figma and React to over 200 students.
+        - Led laboratory sessions, supported practical exercises, and marked coursework with constructive feedback.
+    - title: Teaching Assistant — Applied Statistics and Data Mining
+      institution: Queen Mary University of London
+      year: 2022–2024
+      description:
+        - Applied Statistics (IOT764P, ECS764A); Data Mining (IOT607U).
+    - title: Teaching Assistant — Computer Vision and Accelerated Computing
+      institution: Lehigh University
+      year: '2020'
+      description:
+        - Introduction to Robotic Perception and Computer Vision (ECE 350/45).
+        - Accelerated Computing for Machine Learning (DSCI 421).
+
+- title: Academic Service
+  type: time_table
+  contents:
+    - title: Peer Reviewer
+      year: '2026'
+      description:
+        - IEEE Signal Processing Letters; IJCNN 2026; ICASSP 2027.
+    - title: WiMIR Mentor
+      year: '2026'
+      description:
+        - Mentored two early-career researchers in MIR on research development and career planning.
+    - title: Conference Volunteer
+      year: Sep 2025
+      description:
+        - Supported the poster session at the AES International Conference on Artificial Intelligence and Machine Learning for Audio.
+
+- title: Honours
+  type: time_table
+  contents:
+    - title: Outstanding Undergraduate Thesis (top 10%)
+      institution: Beihang University
+      year: '2021'
+    - title: Outstanding Graduate (top 10%)
+      institution: Beihang University
+      year: '2021'
+    - title: First Class Scholarship for Excellent Study (top 10%)
+      institution: Beihang University
+      year: 2017–2018
+
+- title: Technical Skills
+  type: map
+  contents:
+    - name: Programming
+      value: Python, C, C++, Java, MATLAB, Swift, MIPS assembly
+    - name: Tools and frameworks
+      value: PyTorch, TensorFlow, LaTeX, Figma, React, GitHub, Django, Linux, ROS, Docker
