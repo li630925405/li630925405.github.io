@@ -93,7 +93,8 @@ body.academic-site {
 .academic-site .paper-venue { margin: 0; font-size: 14px; line-height: 1.6; color: var(--global-text-color-light); }
 .submission-status { color: var(--global-text-color-light); font-style: italic; }
 .paper-links { display: flex; flex-wrap: wrap; gap: 7px 18px; align-items: baseline; margin-top: 7px; font-size: 13px; }
-.paper-links a span { color: inherit; }
+.paper-links > a { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.paper-links > a i { font-size: .95em; line-height: 1; }
 .paper-citation { min-width: 0; }
 .paper-citation summary { cursor: pointer; color: var(--global-theme-color); list-style-position: inside; }
 .paper-citation[open] { flex-basis: 100%; }

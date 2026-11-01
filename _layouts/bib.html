@@ -5,12 +5,12 @@
   <p class="paper-authors">{% for author in entry.author_array %}{% unless forloop.first %}, {% endunless %}{% if author.last == 'Li' and author.first == 'Yazhou' %}<strong>{{ author.first }} {{ author.last }}</strong>{% else %}{{ author.first }} {{ author.last }}{% endif %}{% endfor %}</p>
   <p class="paper-venue">{% if entry.type == 'unpublished' %}<span class="submission-status">Manuscript under submission</span> · {{ entry.year }}{% else %}{{ entry.booktitle }}{% if entry.address %}, {{ entry.address }}{% endif %} · {{ entry.year }}{% endif %}</p>
   <div class="paper-links">
-    {% if entry.html %}<a href="{{ entry.html }}">Publisher <span aria-hidden="true">↗</span></a>{% endif %}
-    {% if entry.pdf %}<a href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}">PDF <span aria-hidden="true">↗</span></a>{% endif %}
-    {% if entry.code %}<a href="{{ entry.code }}">Code <span aria-hidden="true">↗</span></a>{% endif %}
-    {% if entry.slides %}<a href="{% if entry.slides contains '://' %}{{ entry.slides }}{% else %}{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}{% endif %}">Slides <span aria-hidden="true">↗</span></a>{% endif %}
-    {% if entry.poster %}<a href="{% if entry.poster contains '://' %}{{ entry.poster }}{% else %}{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}{% endif %}">Poster <span aria-hidden="true">↗</span></a>{% endif %}
-    {% if entry.video %}<a href="{{ entry.video }}">Video <span aria-hidden="true">↗</span></a>{% endif %}
+    {% if entry.html %}<a href="{{ entry.html }}"><i class="fa-solid fa-globe" aria-hidden="true"></i>Publisher</a>{% endif %}
+    {% if entry.pdf %}<a href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>PDF</a>{% endif %}
+    {% if entry.code %}<a href="{{ entry.code }}"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>{% endif %}
+    {% if entry.slides %}<a href="{% if entry.slides contains '://' %}{{ entry.slides }}{% else %}{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}{% endif %}"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i>Slides</a>{% endif %}
+    {% if entry.poster %}<a href="{% if entry.poster contains '://' %}{{ entry.poster }}{% else %}{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}{% endif %}"><i class="fa-solid fa-file-image" aria-hidden="true"></i>Poster</a>{% endif %}
+    {% if entry.video %}<a href="{{ entry.video }}"><i class="fa-solid fa-circle-play" aria-hidden="true"></i>Video</a>{% endif %}
     {% if entry.bibtex_show %}<details class="paper-citation"><summary>BibTeX</summary><div class="citation-content">{% highlight bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endhighlight %}</div></details>{% endif %}
   </div>
 </article>
